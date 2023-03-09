@@ -15,7 +15,8 @@ public class GameManager : MonoBehaviour
     public Button restartButton;
 
     public int livesNumber;
-
+    
+    public AudioSource audioSource;
     public Slider volumeSlider;
     
     public TextMeshProUGUI gameOverText;
@@ -27,6 +28,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
          livesNumber = 4;
+         
+         audioSource.volume = PlayerPrefs.GetFloat("MusicVolume");
     }
 
     // Update is called once per frame

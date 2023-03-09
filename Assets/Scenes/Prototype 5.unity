@@ -220,7 +220,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 71324817}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 608565885}
+        m_TargetAssemblyTypeName: MusicScript, Assembly-CSharp
+        m_MethodName: SavePrefs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &71324817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -932,7 +944,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 512015036}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 608565885}
+        m_TargetAssemblyTypeName: MusicScript, Assembly-CSharp
+        m_MethodName: SavePrefs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &512015036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1315,8 +1339,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b829990b726838459e7e34b4b6cb48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioSource: {fileID: 608565884}
-  slider: {fileID: 0}
+  music: {fileID: 608565884}
+  slider: {fileID: 1687669229}
 --- !u!4 &608565886
 Transform:
   m_ObjectHideFlags: 0
@@ -1675,6 +1699,7 @@ MonoBehaviour:
   livesObject: {fileID: 2060596130}
   restartButton: {fileID: 601594216}
   livesNumber: 0
+  audioSource: {fileID: 608565884}
   volumeSlider: {fileID: 1687669229}
   gameOverText: {fileID: 1172833916}
   score: 0
@@ -1791,7 +1816,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 894245439}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 608565885}
+        m_TargetAssemblyTypeName: MusicScript, Assembly-CSharp
+        m_MethodName: SavePrefs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &894245439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2081,7 +2118,7 @@ RectTransform:
   - {fileID: 512015033}
   - {fileID: 1936136062}
   m_Father: {fileID: 1449614051}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2568,8 +2605,8 @@ RectTransform:
   - {fileID: 1731805269}
   - {fileID: 1172833915}
   - {fileID: 601594215}
-  - {fileID: 1216538850}
   - {fileID: 1687669228}
+  - {fileID: 1216538850}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2775,7 +2812,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687669227}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2785,7 +2822,7 @@ RectTransform:
   - {fileID: 1409062669}
   - {fileID: 812149965}
   m_Father: {fileID: 1449614051}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
