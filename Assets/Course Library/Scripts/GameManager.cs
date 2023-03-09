@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public Button restartButton;
 
     public int livesNumber;
+
+    public Slider volumeSlider;
     
     public TextMeshProUGUI gameOverText;
     public int score;
@@ -66,5 +68,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(spawnEnemies());
         updateScore(0);
         titleScreen.gameObject.SetActive(false);
+        volumeSlider.gameObject.SetActive(false);
     }
 }
