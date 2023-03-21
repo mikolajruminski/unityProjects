@@ -7,12 +7,21 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {    
+    //mouse movement//
+   
+    //mouse movement end//
     public List <GameObject> targets;
+
+    public GameObject loadMusic;
+
+    private MusicScript musicScript;
     public TextMeshProUGUI scoreText;
     public GameObject titleScreen;
     public GameObject [] lives;
     public GameObject livesObject;
     public Button restartButton;
+
+    public Image pauseScreen;
 
     public int livesNumber;
     
@@ -23,8 +32,15 @@ public class GameManager : MonoBehaviour
     public int score;
     private float spawnRate = 1.0f;
 
+    public bool isPaused = false;
+
     public bool isGameActive;
     // Start is called before the first frame update
+    void Awake() {
+      musicScript = loadMusic.GetComponent<MusicScript>();
+      musicScript.LoadPrefs();
+      
+    }
     void Start()
     {
          livesNumber = 4;
@@ -35,7 +51,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        PauseGame();
     }
 
     IEnumerator spawnEnemies () {
@@ -73,4 +89,20 @@ public class GameManager : MonoBehaviour
         titleScreen.gameObject.SetActive(false);
         volumeSlider.gameObject.SetActive(false);
     }
+
+    void PauseGame() {
+        if (Input.GetKeyDown(KeyCode.P) && isPaused == false && isGameActive){
+        Time.timeScale = 0f;
+        isPaused = true;
+        pauseScreen.gameObject.SetActive(true);
+        }
+
+        else if (Input.GetKeyDown(KeyCode.P) && isPaused == true && isGameActive) {
+        Time.timeScale = 1.0f;
+        isPaused = false;
+        pauseScreen.gameObject.SetActive(false);
+        }
+    }
+     
+
 }

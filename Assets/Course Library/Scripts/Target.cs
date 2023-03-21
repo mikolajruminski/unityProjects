@@ -68,13 +68,14 @@ public class Target : MonoBehaviour
         }
     }
 
-    private void OnMouseDown()
-    {
+    
+       
+       public void DestroyTarget() {
+
         if (gameManager.isGameActive){
         Destroy(gameObject);
         gameManager.updateScore(pointValue);
         Instantiate(explosionParticle, transform.position, transform.rotation);
-        }
-    }
-    
+       }
+       }   
 }

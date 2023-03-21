@@ -23,6 +23,7 @@ public class MusicScript : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+        
     }
     
     void Start()
@@ -43,4 +44,11 @@ public class MusicScript : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", music.volume);
         PlayerPrefs.Save();
     }
+
+    public void LoadPrefs () {
+        slider.value = PlayerPrefs.GetFloat("MusicVolume");
+        slider.value = music.volume;
+    }
+
+    
 }
